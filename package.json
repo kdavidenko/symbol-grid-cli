@@ -1,0 +1,21 @@
+{
+  "name": "symbol-grid-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "init": "node index init",
+    "create": "node index create",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kdavidenko/symbol-grid-cli.git"
+  },
+  "author": "kdavidenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kdavidenko/symbol-grid-cli/issues"
+  },
+  "homepage": "https://github.com/kdavidenko/symbol-grid-cli#readme",
+  "description": ""
+}

@@ -12,8 +12,30 @@ if (cmd === 'init') {
   })
   process.exit(0);
 } else if (cmd === 'create') {
-    console.log('hi')
-    process.exit(0);
+
+  const source = path.join(__dirname, './symbols-grid-component/src/GridSelection/GridSelection.js');
+  const destDir = path.join(process.cwd(), './components/GridSelection', 'GridSelection');
+  const dest = path.join(destDir, 'GridSelection.js');
+
+  if (propX && propY) {
+    console.log(`Creating ${propX}x${propY} GridSelection component...`)
+  } else  {
+    console.log(`Creating default GridSelection component...`)
+  }
+
+  fs.mkdirSync(destDir, { recursive: true });
+
+
+  fs.copyFile(source, dest, (err) => {
+    if (err) {
+      console.error('Error copying file:', err);
+      process.exit(1);
+    } else {
+      console.log('File copied successfully!');
+      process.exit(0);
+    }
+  });
+
 
 } else {
   console.error(`Usage: create <x> <y>`);
